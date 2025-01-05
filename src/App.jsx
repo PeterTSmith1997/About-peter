@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="bg-gray-100 min-h-screen">
       <Header />
-      <main className="container mx-auto px-4 py-6">
+      <main className="w-full px-4 py-6 bg-primary-light">
         <About />
         <Research />
         <News />
