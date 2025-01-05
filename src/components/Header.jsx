@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <header className="flex flex-col items-center text-center p-6 bg-gray-50 shadow-md">
       <img
-        src="https://via.placeholder.com/100" // Replace with your actual profile image
+        src="PeterFinalEdits003.jpg" // Replace with your actual profile image
         alt="Profile"
         className="w-28 h-28 rounded-full border-4 border-blue-500 shadow-lg"
       />
