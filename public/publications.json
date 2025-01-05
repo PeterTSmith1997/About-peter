@@ -1,0 +1,20 @@
+{
+  "publications": [
+    {
+      "citationKey": "Smith2024UsingApproach",
+      "entryType": "incollection",
+      "entryTags": {
+        "title": "Using Multivariate Heuristic Analysis for Detecting Attacks in Website Log Files: A Formulaic Approach",
+        "year": "2024",
+        "booktitle": "Proceedings of the Second International Conference on Advances in Computing Research (ACR'24)",
+        "author": "Smith, Peter and Robson, John and Dalton, Nick",
+        "editor": "Daimi Kevin and Al Sadoon, Abeer",
+        "pages": "359--370",
+        "publisher": "Springer Nature Switzerland",
+        "url": "https://link.springer.com/10.1007/978-3-031-56950-0_30",
+        "address": "Cham",
+        "doi": "10.1007/978-3-031-56950-0_30"
+      }
+    }
+  ]
+}

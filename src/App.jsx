@@ -1,0 +1,23 @@
+import React from 'react';
+import Header from './components/Header';
+import About from './components/About';
+import Research from './components/Research';
+import News from './components/News';
+import Publications from './components/Publications';
+import 'font-awesome/css/font-awesome.css';
+
+function App() {
+  return (
+    <div className="bg-gray-100 min-h-screen">
+      <Header />
+      <main className="container mx-auto px-4 py-6">
+        <About />
+        <Research />
+        <News />
+        <Publications />
+      </main>
+    </div>
+  );
+}
+
+export default App;
