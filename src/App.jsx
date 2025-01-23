@@ -1,10 +1,11 @@
-import React from 'react';
-import Header from './components/Header';
-import About from './components/About';
-import Research from './components/Research';
-import News from './components/News';
-import Publications from './components/Publications';
-import 'font-awesome/css/font-awesome.css';
+import React from "react";
+import Header from "./components/Header";
+import About from "./components/About";
+import Research from "./components/Research";
+import News from "./components/News";
+import Publications from "./components/Publications";
+import Business from "./components/business";
+import "font-awesome/css/font-awesome.css";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Research />
         <News />
         <Publications />
+        <Business />
       </main>
     </div>
   );
