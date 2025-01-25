@@ -7,7 +7,8 @@ const Header = () => {
       <img
         src="PeterFinalEdits003.jpg" // Replace with your actual profile image path
         alt="Profile of Peter Smith"
-        className="w-28 h-28 rounded-full border-4 border-primary shadow-lg"
+        className="rounded-full overflow-hidden object-cover h-20 w-20 position-center"
+        style={{ objectPosition: "top" }}
       />
 
       {/* Name and Title */}
@@ -39,6 +40,13 @@ const Header = () => {
         >
           <i className="fab fa-linkedin fa-lg"></i>
         </a>
+        <a href="https://x.com/peterSmithPHD"
+          className="text-primary hover:text-primary-dark transition duration-200"
+          aria-label="Twitter Profile"
+        >
+          <i className="fab fa-twitter fa-lg"></i>
+        </a>
+
       </div>
     </header>
   );
