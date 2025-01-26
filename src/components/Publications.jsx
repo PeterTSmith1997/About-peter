@@ -25,7 +25,7 @@ const Publications = () => {
   const currentItems = publications.slice(offset, offset + itemsPerPage);
 
   return (
-    <section className="w-[70%] mx-auto p-6 bg-white shadow-md rounded-lg mt-4">
+    <section className="w-full sm:w-[70%] mx-auto p-6 bg-white shadow-md rounded-lg mt-4">
       <h2 className="text-2xl font-semibold text-gray-800 mb-6">Publications</h2>
       {publications.length === 0 ? (
         <p className="text-gray-600">No publications found.</p>

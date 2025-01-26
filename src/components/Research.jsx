@@ -15,7 +15,7 @@ const ResearchInterests = () => {
   }, []);
 
   return (
-    <section className="w-[70%] mx-auto p-6 bg-white shadow-md rounded-lg mt-4">
+    <section className="w-full sm:w-[70%] mx-auto p-6 bg-white shadow-md rounded-lg mt-4">
       <h2 className="text-2xl font-semibold text-gray-800 mb-6">Research Interests</h2>
       <div className="space-y-4">
         {Object.keys(interests).length === 0 ? (

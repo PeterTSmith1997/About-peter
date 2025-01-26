@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <header className="flex flex-col items-center text-center p-6 bg-primary-light shadow-md">
       {/* Profile Image */}
@@ -25,9 +31,18 @@ const Header = () => {
         peter.t.smith@northumbria.ac.uk
       </a>
 
+      {/* Hamburger Menu for Mobile */}
+      <button
+        className="lg:hidden mt-4 p-2 text-primary-dark"
+        onClick={toggleMenu}
+        aria-label="Toggle Navigation"
+      >
+        <i className={`fas ${isMenuOpen ? 'fa-times' : 'fa-bars'} fa-lg`} />
+      </button>
+
       {/* Navigation Links */}
-      <nav className="mt-6">
-        <ul className="flex space-x-6">
+      <nav className={`mt-6 ${isMenuOpen ? 'block' : 'hidden'} lg:block`}>
+        <ul className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-6">
           <li>
             <Link
               to="/"
