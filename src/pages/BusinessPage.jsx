@@ -1,12 +1,19 @@
-import React from 'react';
-import Business from '../components/Business';
+// BusinessPage.js
+import React from "react";
+import Business from "../components/business";
+import { Helmet } from "react-helmet";
 
-function BusinessPage() {
-    return (
-        <div>
-            <Business />
-        </div>
-    );
-}
+const BusinessPage = () => (
+  <div>
+    <Helmet>
+      <title>Business - Peter Smith</title>
+      <meta
+        name="description"
+        content="Learn about Peter Smith's business ventures and collaborations."
+      />
+    </Helmet>
+    <Business />
+  </div>
+);
 
 export default BusinessPage;
