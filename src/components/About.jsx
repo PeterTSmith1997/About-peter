@@ -16,6 +16,15 @@ const About = () => {
         in ensuring that the online environment remains safe and secure for all
         users.
       </p>
+
+      <h3 className="text-xl font-semibold text-gray-800 mb-4">Skills</h3>
+      <ul className="list-disc list-inside text-gray-700 mb-6">
+        <li>Expertise in web development using JavaScript, Node.js, and React</li>
+        <li>Extensive experience with cybersecurity frameworks and tools</li>
+        <li>Proficiency in data analysis and machine learning for online safety</li>
+        <li>Strong knowledge of Tailwind CSS for creating responsive designs</li>
+        <li>Collaboration with diverse teams to deliver high-quality solutions</li>
+      </ul>
     </section>
   );
 };

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -7,8 +8,8 @@ const Header = () => {
       <img
         src="PeterFinalEdits003.jpg" // Replace with your actual profile image path
         alt="Profile of Peter Smith"
-        className="rounded-full overflow-hidden object-cover h-20 w-20 position-center"
-        style={{ objectPosition: "top" }}
+        className="rounded-full overflow-hidden object-cover h-28 w-28 position-center border-4
+        border-primary shadow-lg object-top"
       />
 
       {/* Name and Title */}
@@ -23,6 +24,52 @@ const Header = () => {
       >
         peter.t.smith@northumbria.ac.uk
       </a>
+
+      {/* Navigation Links */}
+      <nav className="mt-6">
+        <ul className="flex space-x-6">
+          <li>
+            <Link
+              to="/"
+              className="text-primary-dark hover:text-primary transition duration-200"
+            >
+              About
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/research"
+              className="text-primary-dark hover:text-primary transition duration-200"
+            >
+              Research
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/news"
+              className="text-primary-dark hover:text-primary transition duration-200"
+            >
+              News
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/publications"
+              className="text-primary-dark hover:text-primary transition duration-200"
+            >
+              Publications
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/business"
+              className="text-primary-dark hover:text-primary transition duration-200"
+            >
+              Business
+            </Link>
+          </li>
+        </ul>
+      </nav>
 
       {/* Social Media Icons */}
       <div className="flex space-x-4 mt-4">
@@ -40,13 +87,13 @@ const Header = () => {
         >
           <i className="fab fa-linkedin fa-lg"></i>
         </a>
-        <a href="https://x.com/peterSmithPHD"
+        <a
+          href="https://x.com/peterSmithPHD"
           className="text-primary hover:text-primary-dark transition duration-200"
           aria-label="Twitter Profile"
         >
           <i className="fab fa-twitter fa-lg"></i>
         </a>
-
       </div>
     </header>
   );

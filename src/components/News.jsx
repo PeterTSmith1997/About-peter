@@ -11,7 +11,7 @@ const News = () => {
       .catch((error) => console.error("Error loading news:", error));
   }, []);
 
-  const visibleItems = showAll ? newsItems : newsItems.slice(0, 2);
+  const visibleItems = showAll ? newsItems : newsItems.slice(0, 20);
 
   return (
     <section className="w-[70%] mx-auto p-6 bg-white shadow-md rounded-lg mt-4">
