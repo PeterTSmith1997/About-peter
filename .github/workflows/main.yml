@@ -9,14 +9,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      
+      - name: Checkout code
+        uses: actions/checkout@v3
+      # Add additional build steps here if needed
+      - name: Build
+        run: echo "Building the project..."
+
   automerge:
     needs: build
     runs-on: ubuntu-latest
-
     permissions:
       pull-requests: write
       contents: write
-
     steps:
-      - uses: fastify/github-action-merge-dependabot@v3
+      - name: Automerge Dependabot PRs
+        uses: fastify/github-action-merge-dependabot@v3
