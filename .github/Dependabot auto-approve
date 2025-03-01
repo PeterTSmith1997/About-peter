@@ -1,2 +1,23 @@
-- name: Github Action Merge Dependabot
-  uses: fastify/github-action-merge-dependabot@v3.11.0
+name: CI
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # ...
+
+  automerge:
+    needs: build
+    runs-on: ubuntu-latest
+
+    permissions:
+      pull-requests: write
+      contents: write
+
+    steps:
+      - uses: fastify/github-action-merge-dependabot@v3
