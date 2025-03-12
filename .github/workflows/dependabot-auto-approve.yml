@@ -2,8 +2,15 @@ name: Dependabot Auto-Approve
 
 on:
   pull_request:
+    types:
+      - opened
+      - synchronize
 
 jobs:
   auto-approve:
-    name: Dependabot Auto Merge
-    uses: ahmadnassri/action-dependabot-auto-merge@v2.6.6
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dependabot Auto Merge
+        uses: ahmadnassri/action-dependabot-auto-merge@v2.6.6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
