@@ -16,6 +16,15 @@ jobs:
     runs-on: ubuntu-latest
     if: github.actor == 'dependabot[bot]'
     steps:
+      - name: Debug Secrets
+        run: |
+          if [ -z "${{ secrets.MYTOKEN }}" ]; then
+            echo "❌ MYTOKEN is missing!"
+            exit 1
+          else
+            echo "✅ MYTOKEN is available."
+          fi
+
       - name: Dependabot Auto Merge
         uses: ahmadnassri/action-dependabot-auto-merge@v2.6.6
         with:
