@@ -6,9 +6,14 @@ on:
       - opened
       - synchronize
 
+permissions:
+  pull-requests: write
+  contents: write
+
 jobs:
   auto-approve:
     runs-on: ubuntu-latest
+    if: github.actor == 'dependabot[bot]'
     steps:
       - name: Dependabot Auto Merge
         uses: ahmadnassri/action-dependabot-auto-merge@v2.6.6
