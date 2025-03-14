@@ -29,6 +29,9 @@ const ResearchInterests = () => {
                   <li key={idx}>{interest}</li>
                 ))}
               </ul>
+              {index !== Object.keys(interests).length - 1 && (
+                <hr className="my-4 border-gray-300" />
+              )}
             </div>
           ))
         )}

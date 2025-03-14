@@ -58,6 +58,7 @@ const Publications = () => {
                   </p>
                 )}
               </li>
+              
             ))}
           </ul>
           <ReactPaginate
