@@ -25,7 +25,12 @@ jobs:
             echo "✅ MYTOKEN is available."
           fi
 
-      - name: Dependabot Auto Merge
+      - name: Approve Dependabot PR
+        run: gh pr review --approve "$GITHUB_REF"
+        env:
+          GH_TOKEN: ${{ secrets.MYTOKEN }}
+
+      - name: Merge Dependabot PR
         uses: ahmadnassri/action-dependabot-auto-merge@v2.6.6
         with:
           github-token: ${{ secrets.MYTOKEN }}
