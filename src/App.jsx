@@ -6,6 +6,7 @@ import ResearchPage from "./pages/ResearchPage";
 import NewsPage from "./pages/NewsPage";
 import PublicationsPage from "./pages/PublicationsPage";
 import BusinessPage from "./pages/BusinessPage";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/news" element={<NewsPage />} />
             <Route path="/publications" element={<PublicationsPage />} />
             <Route path="/business" element={<BusinessPage />} />
+            <SpeedInsights/>
           </Routes>
         </main>
       </div>
