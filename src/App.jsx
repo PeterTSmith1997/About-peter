@@ -6,7 +6,7 @@ import ResearchPage from "./pages/ResearchPage";
 import NewsPage from "./pages/NewsPage";
 import PublicationsPage from "./pages/PublicationsPage";
 import BusinessPage from "./pages/BusinessPage";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function App() {
   return (
@@ -20,10 +20,11 @@ function App() {
             <Route path="/news" element={<NewsPage />} />
             <Route path="/publications" element={<PublicationsPage />} />
             <Route path="/business" element={<BusinessPage />} />
-            <SpeedInsights/>
           </Routes>
         </main>
       </div>
+      {/* SpeedInsights placed outside Routes to track performance across the entire app */}
+      <SpeedInsights />
     </Router>
   );
 }
