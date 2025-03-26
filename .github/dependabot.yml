@@ -1,11 +1,22 @@
-# .github/dependabot.yml
+name: Dependabot Auto-Approve
 
-version: 2
-updates:
-  - package-ecosystem: "npm"
-    directory: "/" # The root of the project
-    schedule:
-      interval: "daily"  # Set to daily updates
-    commit-message:
-      prefix: "chore"
-    versioning-strategy: "increase"  # Optionally adjust this based on your needs
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+permissions:
+  pull-requests: write
+  contents: write
+  packages: write
+
+jobs:
+  auto-approve:
+    runs-on: ubuntu-latest
+    if: github.actor == 'dependabot[bot]'
+    steps:
+      - name: Merge Dependabot PR
+        uses: ahmadnassri/action-dependabot-auto-merge@v2.6.6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
