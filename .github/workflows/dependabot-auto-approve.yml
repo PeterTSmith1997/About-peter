@@ -7,16 +7,22 @@ on:
       - synchronize
 
 permissions:
-  pull-requests: write
   contents: write
-  packages: write
+  pull-requests: write
 
 jobs:
   auto-approve:
     runs-on: ubuntu-latest
     if: github.actor == 'dependabot[bot]'
     steps:
+      - name: Approve PR
+        uses: hmarr/auto-approve-action@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Merge Dependabot PR
         uses: ahmadnassri/action-dependabot-auto-merge@v2.6.6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          target: patch
+          merge-method: squash
