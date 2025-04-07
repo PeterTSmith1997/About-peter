@@ -1,28 +1,22 @@
-name: Dependabot Auto-Approve
+# .github/workflows/automerge.yml
 
-on:
-  pull_request:
-    types:
-      - opened
-      - synchronize
+name: Dependabot auto-merge
+
+on: pull_request
 
 permissions:
   contents: write
-  pull-requests: write
+  pull-requests: write  # Needed if in a private repository
 
 jobs:
-  auto-approve:
+  dependabot:
     runs-on: ubuntu-latest
-    if: github.actor == 'dependabot[bot]'
+    if: ${{ github.actor == 'dependabot[bot]' }}
     steps:
-      - name: Approve PR
-        uses: hmarr/auto-approve-action@v3
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Merge Dependabot PR
-        uses: ahmadnassri/action-dependabot-auto-merge@v2.6.6
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          target: patch
-          merge-method: squash
+      - name: Enable auto-merge for Dependabot PRs
+        run: gh pr merge --auto --merge "$PR_URL"
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          # GitHub provides this variable in the CI env. You don't
+          # need to add anything to the secrets vault.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
