@@ -13,7 +13,7 @@
     "@tailwindcss/vite": "^4.1.12",
     "@vercel/speed-insights": "^1.2.0",
     "font-awesome": "^4.7.0",
-    "react": "^18.3.1",
+    "react": "^19.1.1",
     "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",
     "react-paginate": "^8.3.0",
@@ -22,7 +22,7 @@
   "devDependencies": {
     "@eslint/js": "^9.34.0",
     "@tailwindcss/postcss": "^4.1.12",
-    "@types/react": "^19.0.8",
+    "@types/react": "^19.1.11",
     "@types/react-dom": "^19.0.3",
     "@vitejs/plugin-react": "^5.0.1",
     "eslint": "^9.34.0",
