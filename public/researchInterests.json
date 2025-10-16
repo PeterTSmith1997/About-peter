@@ -1,14 +1,10 @@
 {
     "researchInterests": {
-      "Machine Learning": [
-        "Federated learning",
-        "Explainable AI (XAI)"
-      ],
-      "Cyber Security": [
-        "Privacy protection",
-        "Botnets",
-        "Multivariate analysis"
-      ]
+        "HCI":{
+           "Programming",
+            "coding",
+            "Disability"
+        }
     }
   }
   
