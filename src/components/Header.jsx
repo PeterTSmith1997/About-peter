@@ -82,6 +82,14 @@ const Header = () => {
             >
               Business
             </Link>
+          <li>
+            <Link
+              to="/teaching"
+              className="text-primary-dark hover:text-primary transition duration-200"
+            >
+              Teaching
+            </Link>
+          </li>
           </li>
         </ul>
       </nav>

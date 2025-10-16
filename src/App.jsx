@@ -7,6 +7,7 @@ import NewsPage from "./pages/NewsPage";
 import PublicationsPage from "./pages/PublicationsPage";
 import BusinessPage from "./pages/BusinessPage";
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import TeachingPage from "./pages/Teaching";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/research" element={<ResearchPage />} />
             <Route path="/news" element={<NewsPage />} />
             <Route path="/publications" element={<PublicationsPage />} />
+            <Route path="/teaching" element={<TeachingPage />} />
             <Route path="/business" element={<BusinessPage />} />
           </Routes>
         </main>
