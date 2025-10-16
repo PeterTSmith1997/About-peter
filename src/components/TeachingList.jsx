@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Link from "next/link";
 
 export default function TeachingList() {
   const [teaching, setTeaching] = useState([]);
@@ -33,7 +32,7 @@ export default function TeachingList() {
                 <p>{course.summary}</p>
                 {course.link && (
                   <p>
-                    <Link href={course.link}>Read more →</Link>
+                    <a href={course.link}>Read more →</a>
                   </p>
                 )}
               </div>
