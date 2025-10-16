@@ -1,10 +1,10 @@
 {
     "researchInterests": {
-        "HCI":{
-           "Programming",
+        "HCI": [
+            "Programming",
             "coding",
             "Disability"
-        }
+        ]
     }
   }
   
