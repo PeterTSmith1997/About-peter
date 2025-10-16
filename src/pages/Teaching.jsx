@@ -3,7 +3,7 @@ import TeachingList from "../components/TeachingList";
 
 export default function TeachingPage() {
   return (
-    <main className="max-w-4xl mx-auto p-6 prose lg:prose-xl">
+    <section className="w-full sm:w-[70%] mx-auto p-6 bg-white shadow-md rounded-lg mt-4">
       <header>
         <h1>Teaching</h1>
         <p className="lead">
@@ -20,6 +20,6 @@ export default function TeachingPage() {
           <a href="/research">Research</a> page.
         </p>
       </footer>
-    </main>
+    </section>
   );
 }
