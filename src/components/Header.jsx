@@ -82,6 +82,7 @@ const Header = () => {
             >
               Business
             </Link>
+            </li>
           <li>
             <Link
               to="/teaching"
@@ -89,7 +90,6 @@ const Header = () => {
             >
               Teaching
             </Link>
-          </li>
           </li>
         </ul>
       </nav>
