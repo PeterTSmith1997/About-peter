@@ -1,9 +1,14 @@
 [
   {
     "year": 2025,
+    "semester": 2,
+    "title": " Mobile & Web App Development",
+    "summary": "Helped with feedback to students"
+  }
+  {
+    "year": 2025,
     "semester": 1,
     "title": "Code Wangling",
-    "summary": "A foundation year module programming discord bots",
-    "link": "/teaching/code-wangling"
+    "summary": "A foundation year module programming discord bots"
   }
 ]
